@@ -1,0 +1,9 @@
+com\duoc\RunCucumberTest.class
+com\duoc\steps\CheckSteps.class
+com\duoc\steps\SuscribeSteps.class
+com\duoc\steps\LanguajeSteps.class
+com\duoc\AppTest.class
+com\duoc\steps\FeedbackSteps.class
+com\duoc\steps\Hooks.class
+com\duoc\utils\ExcelReportGenerator.class
+com\duoc\steps\AccountHistorySteps.class

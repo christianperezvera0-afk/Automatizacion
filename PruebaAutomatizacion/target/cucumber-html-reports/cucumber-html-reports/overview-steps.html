@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Reporte Selenium Duoc</td>
+        <td>1</td>
+      <td>27 nov 2025, 19:14</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.duoc.steps.AccountHistorySteps.deberia_mostar_el_campo_con_el_mensaje(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="21604700">0.021</td>
+              <td class="duration" data-value="21604700">0.021</td>
+              <td class="duration" data-value="21604700">0.021</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.AccountHistorySteps.el_navegador_esta_abierto_en_la_pagina(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5639646900">5.639</td>
+              <td class="duration" data-value="5639646900">5.639</td>
+              <td class="duration" data-value="5639646900">5.639</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.AccountHistorySteps.el_usuario_hace_clic_en(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2265284500">2.265</td>
+              <td class="duration" data-value="2265284500">2.292</td>
+              <td class="duration" data-value="4530569000">4.530</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.AccountHistorySteps.el_usuario_ingresa_en_el_y_en_la(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="206767300">0.206</td>
+              <td class="duration" data-value="206767300">0.206</td>
+              <td class="duration" data-value="206767300">0.206</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.AccountHistorySteps.el_usuario_realiza_clic_en_para_dirigirse_a_la_pagina_de_login(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1761173600">1.761</td>
+              <td class="duration" data-value="1761173600">1.761</td>
+              <td class="duration" data-value="1761173600">1.761</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.AccountHistorySteps.hace_clic_en_el_boton_de_login(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2056034600">2.056</td>
+              <td class="duration" data-value="2056034600">2.056</td>
+              <td class="duration" data-value="2056034600">2.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.CheckSteps.el_navegador_se_encuentra_abierto_en(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3206041000">3.206</td>
+              <td class="duration" data-value="3206041000">3.206</td>
+              <td class="duration" data-value="3206041000">3.206</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.CheckSteps.el_usuario_hace_clic_en_para_verificar_el_servidor(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2075327500">2.075</td>
+              <td class="duration" data-value="2075327500">2.075</td>
+              <td class="duration" data-value="2075327500">2.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.CheckSteps.el_usuario_realiza_clic_en_para_dirigirse_a_la_pagina_de_server_status_check(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2238173800">2.238</td>
+              <td class="duration" data-value="2238173800">2.238</td>
+              <td class="duration" data-value="2238173800">2.238</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.CheckSteps.se_deberia_mostrar_el_mensaje_con_el_mensaje(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="27558800">0.027</td>
+              <td class="duration" data-value="27558800">0.027</td>
+              <td class="duration" data-value="27558800">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.FeedbackSteps.el_navegador_esta_abierto_en(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="5227700266">5.227</td>
+              <td class="duration" data-value="5227700266">9.263</td>
+              <td class="duration" data-value="15683100800">15.683</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.FeedbackSteps.el_usuario_ingresa_en_el_y_en_la_tambien_en_la_y_en_la(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="469252866">0.469</td>
+              <td class="duration" data-value="469252866">0.511</td>
+              <td class="duration" data-value="1407758600">1.407</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.FeedbackSteps.el_usuario_realiza_clic_en_para_dirigirse_a_la_pagina_de_suscripcion(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2246883333">2.246</td>
+              <td class="duration" data-value="2246883333">2.268</td>
+              <td class="duration" data-value="6740650000">6.740</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.FeedbackSteps.hace_clic_en_el_boton_de_submit(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2156795333">2.156</td>
+              <td class="duration" data-value="2156795333">2.220</td>
+              <td class="duration" data-value="6470386000">6.470</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.FeedbackSteps.se_deberia_mostrar_en_el_campo_con_el_mensaje(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="29975800">0.029</td>
+              <td class="duration" data-value="29975800">0.047</td>
+              <td class="duration" data-value="89927400">0.089</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.Hooks.setUp()</td>
+              <td>8</td>
+              <td class="duration" data-value="780346737">0.780</td>
+              <td class="duration" data-value="780346737">1.382</td>
+              <td class="duration" data-value="6242773900">6.242</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.Hooks.tearDown()</td>
+              <td>8</td>
+              <td class="duration" data-value="147615512">0.147</td>
+              <td class="duration" data-value="147615512">0.168</td>
+              <td class="duration" data-value="1180924100">1.180</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.LanguajeSteps.el_navegador_se_encuentra_en_pagina(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3071829100">3.071</td>
+              <td class="duration" data-value="3071829100">3.071</td>
+              <td class="duration" data-value="3071829100">3.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.LanguajeSteps.el_usuario_ingresa_a(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2249606700">2.249</td>
+              <td class="duration" data-value="2249606700">2.249</td>
+              <td class="duration" data-value="2249606700">2.249</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.LanguajeSteps.el_usuario_ingresa_en_campo_el_y_en_la(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="192222800">0.192</td>
+              <td class="duration" data-value="192222800">0.192</td>
+              <td class="duration" data-value="192222800">0.192</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.LanguajeSteps.el_usuario_realiza_un_clic_en_para_dirigirse_a_la_pagina_de_login(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2235123900">2.235</td>
+              <td class="duration" data-value="2235123900">2.235</td>
+              <td class="duration" data-value="2235123900">2.235</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.LanguajeSteps.hace_clic_en_boton_de_login(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2054146200">2.054</td>
+              <td class="duration" data-value="2054146200">2.054</td>
+              <td class="duration" data-value="2054146200">2.054</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.LanguajeSteps.se_deberia_mostrar_en_el_campo_el_texto(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="18613900">0.018</td>
+              <td class="duration" data-value="18613900">0.018</td>
+              <td class="duration" data-value="18613900">0.018</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.SuscribeSteps.el_navegador_esta_abierto_en(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="3080858600">3.080</td>
+              <td class="duration" data-value="3080858600">3.085</td>
+              <td class="duration" data-value="6161717200">6.161</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.SuscribeSteps.el_usuario_ingresa_en_el(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="137428900">0.137</td>
+              <td class="duration" data-value="137428900">0.138</td>
+              <td class="duration" data-value="274857800">0.274</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.SuscribeSteps.el_usuario_realiza_clic_en_para_dirigirse_a_la_pagina_de_suscripcion(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2234644400">2.234</td>
+              <td class="duration" data-value="2234644400">2.237</td>
+              <td class="duration" data-value="4469288800">4.469</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.SuscribeSteps.hace_clic_en_el_boton_de_suscribe(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="46995450">0.046</td>
+              <td class="duration" data-value="46995450">0.048</td>
+              <td class="duration" data-value="93990900">0.093</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.duoc.steps.SuscribeSteps.se_deberia_mostrar_una_alerta_con_el_mensaje(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="2019597400">2.019</td>
+              <td class="duration" data-value="2019597400">2.024</td>
+              <td class="duration" data-value="4039194800">4.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>28</td>
+            <td>58</td>
+            <td class="duration">1.455</td>
+            <td class="duration">15.683</td>
+            <td class="duration">1:24.439</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
